@@ -4,7 +4,7 @@ let isValid = require("./auth_users.js").isValid;
 let users = require("./auth_users.js").users;
 const public_users = express.Router();
 
-
+const axios = require('axios');
 public_users.post("/register", async (req,res) => {
   const {username, password} = req.body;
   try {
